@@ -1,0 +1,6 @@
+@import '~sass/variables';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.selected {
+    background-color: $app-main-color; 
+}

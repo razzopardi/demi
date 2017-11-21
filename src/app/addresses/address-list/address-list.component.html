@@ -1,0 +1,22 @@
+<div [formGroup]="contactForm">
+    <div formArrayName="addresses">
+        <div *ngFor="let address of addresses; let i=index">
+            <h3>
+                Address {{i+1}}
+                <button (click)="removeAddress(i)"
+                    class="btn btn-warning pull-right">
+                    Remove Address
+                </button>
+            </h3>
+            <div>
+            <app-address-form
+                [addresses]="contactForm.controls.addresses"
+                [address]="address">
+            </app-address-form>
+            <hr>
+            </div>
+        </div>
+        <button class="btn btn-secondary" (click)="addAddress()">Add Address</button>
+        <hr>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<h1>comp: add-contact.component</h1>
+<div class="row">
+    <div class="col-md-12">
+        <form [formGroup]="newContactForm" (ngSubmit)="onSave(newContactForm)">
+            <div class="form-group">
+                <label>New Contact:</label>
+                <input class="form-control" type="text" formControlName="fullname">
+                <small [hidden]="newContactForm.controls.fullname.valid">
+                    Fullname is required!
+                </small>
+            </div>
+            <button class="btn btn-primary" type="submit" [disabled]="!newContactForm.valid">Submit</button>
+        </form>
+    </div>
+</div>

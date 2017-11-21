@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Contact List</h1>
+                <h2>You have <strong>{{contacts.length}}</strong> contacts</h2>
+            </div>
+        </div>
+        <div class="row contact-list">
+            <div class="col-md-12 ">
+                <div
+                *ngFor="let contact of contacts"  
+                (click)="onView(contact.id)" 
+                class="contact-list-item" 
+                [ngClass]="{'active': selectedId === contact.id}">
+                    <img class="img-circle" [src]="contact.avatar" alt="" height="60px"/>
+                    <div class="contact-details">
+                        <div class="contact-name">
+                            {{contact.first_name}} 
+                            {{contact.last_name}}
+                        </div>
+                    </div>
+                    <div class="glyphicon glyphicon-trash" (click)="onDelete(contact.id, $event)"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="row">
+            <router-outlet></router-outlet>    
+        </div>
+    </div>
+</div>

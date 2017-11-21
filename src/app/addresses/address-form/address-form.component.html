@@ -1,0 +1,40 @@
+<!-- child-form.component.html -->
+<div [formGroup]="addressForm">
+    <div class="form-group">
+        <label for="street1">Street 1</label>
+        <input class="form-control" formControlName="street1" />
+        <span
+        *ngIf="!addressForm.controls['street1'].valid"
+        class="help-block">Please enter a street address</span>
+    </div>
+    <div class="form-group">
+        <label for="street2">Street 2</label>
+        <input class="form-control" formControlName="street2" />
+        <span
+        *ngIf="!addressForm.controls['street2'].valid"
+        class="help-block">Please enter a street address</span>
+    </div>
+    <div class="form-group">
+        <label for="town">Town</label>
+        <input class="form-control" formControlName="town" />
+        <span class="help-block"
+            *ngIf="!addressForm.controls['town'].valid">
+            Please enter a town</span>
+    </div>
+    <div class="form-group">
+        <label for="contry">Country:</label>
+        <select 
+        class="form-control"
+        formControlName="country"
+        type="text" 
+        name="country" 
+        id="country">
+            <option *ngFor="let country of countries" [value]="country.iso2">{{country.name}}</option>
+        </select>
+        <span class="help-block text-danger"
+            *ngIf="!addressForm.controls['country'].valid">
+            Please select a country...
+        </span>
+    </div>
+
+</div>

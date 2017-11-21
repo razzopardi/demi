@@ -1,0 +1,17 @@
+$app-main-color:  rgb(63,81,181);
+$app-light-grey: #F1F1F1;
+$app-grey: #878787;
+$app-dark-grey: #292929;
+
+.app-main-color {
+    color: $app-main-color;
+}
+.app-ligh-grey {
+    color: $app-light-grey;
+}
+.app-grey {
+    color: $app-grey;
+}
+.app-dark-grey {
+    color: $app-dark-grey;
+}
