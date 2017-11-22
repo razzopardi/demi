@@ -104,8 +104,9 @@ export class ContactFormComponent implements OnInit {
         (id: number) => currentIDs.indexOf(id) < 0
       );
     } else {
-      // If no adress id are fournd in contactData
-      // I assumet that all addresses have been removed.
+      // If no adress ids are found in contactData
+      // (only presisted addresses have ids)
+      // I assume that all addresses have been removed.
       ids = this.initialAddressesId;
     }
 
