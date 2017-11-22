@@ -68,7 +68,7 @@ export class ContactsComponent implements OnInit, OnDestroy {
         // Remove deleted contact for array.
         this.contacts = this.
           contacts.filter(contact => contact.id !== id);
-        // Navigat back to contats
+        // Navigate back to contats
         this.router.navigate(['contacts']);
       },
       (error) => console.log(error)
