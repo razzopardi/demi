@@ -55,6 +55,7 @@ export class ContactAddComponent implements OnInit {
     );
   }
 
+  // Full name validator: Users are only allowed to enter two words with space in between
   forbiddenFullName(control: FormControl): {[s: string]: boolean} {
     if (this.validFullNameReg.exec(control.value) === null) {
       return {'forbiddenFullName': true};
