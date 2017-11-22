@@ -41,6 +41,7 @@ export class AddressListComponent implements OnInit {
   }
 
   removeAddress(index: number) {
+    // At first I was not allowing the use to delete if only 1 address is set
     // if (this.addresses.length > 1) {
       const addressForRemoval = this.addAddress[index];
       console.log(addressForRemoval);
